@@ -1,0 +1,126 @@
+
+/* css file */
+
+body {
+   font-family: Arial, sans-serif;
+     color: black;
+   background-color: lightyellow;
+    padding: 20px;
+   margin: 0;
+}
+
+
+
+
+.frem {
+   max-width: 900px;
+   margin: 20px auto;
+   background-color: white;
+   padding: 30px;
+   border: 2px solid black;
+}
+
+h1 {
+   color: black;
+   font-size: 2.5em;
+   margin-bottom: 10px;
+   text-align: center;
+}
+
+.name {
+   color: red;
+   font-size: 3em;
+   text-align: center;
+}
+
+h3 {
+   color: maroon;
+   font-size: 1.5em;
+   margin-top: 20px;
+   padding-left: 15px;
+   background-color: yellow;
+   padding: 10px;
+}
+
+p {
+   color: black;
+   line-height: 1.6;
+   padding: 10px;
+   background-color: lightgreen;
+   border: 1px solid green;
+}
+
+hr {
+   border: none;
+   border-top: 3px solid red;
+   margin: 20px 0;
+}
+
+ul {
+   margin-left: 30px;
+}
+
+li {
+   margin-bottom: 10px;
+   padding: 5px;
+}
+
+
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin: 20px 0;
+   border: 2px solid black;
+}
+
+th {
+   background-color: maroon;
+   color: white;
+   padding: 12px;
+   text-align: left;
+   font-weight: bold;
+}
+
+td {
+   padding: 10px;
+   border: 1px solid blue;
+}
+
+tr{
+   background-color: lightyellow;
+}
+
+
+
+tr:hover {
+   background-color: lightgreen;
+}
+
+img {
+   max-width: 100%;
+   height: auto;
+   border: 3px solid black;
+   margin: 15px auto;
+   display: block;
+}
+
+img:hover {
+   border-color: red;
+}
+
+a img {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   margin: 10px;
+   display: inline-block;
+}
+
+a {
+   color: blue;
+   font-weight: bold;
+}
+
+
+

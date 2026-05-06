@@ -1,0 +1,59 @@
+body{background-color: aqua;
+    margin: 2cm 2cm;
+    }
+
+    h1{color: brown;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: black;
+
+    }
+      
+    p{color: black;
+        border:5px 
+        font: size 10px;
+
+    }
+      a{padding: 10px;
+          text-decoration:none;
+          color: blueviolet
+
+          }
+     }
+
+     img{background-color: burlywood;
+     }
+
+
+     link{display: flex;
+        list-style: none;
+        background-color: blueviolet;
+        padding: o.5;
+     }
+
+
+     table{border: 1px black;
+           border-collapse: collapse;
+           color: darkmagenta;
+
+     }
+
+     th{color: darkgoldenrod;
+
+     }
+       td{color: blue;}
+
+     button{background-color: rgb(29, 29, 74);
+     }
+      
+        h2{color: brown;}
+        li{color: darkblue;}
+        a:hover{background-color: rgb(174, 129, 57);}
+    
+    }
+
+
+
+
+
+
