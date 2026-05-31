@@ -52,6 +52,11 @@ function typeWriter(strArr,i){
    
 
 }
+/*This function takes a string (strArr) and an srting index (i),
+and displays the text one character at a time inside the
+ "welcome-txt" element. It uses setTimeout to create a delay
+ between each character making it look like the text is being
+typed in real time by making recursive call.
 
 
 
