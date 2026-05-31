@@ -64,16 +64,20 @@ nav a[href="index.html"] {
 
 
 }
-
+#time h1{
+    text-align: center;
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem;
+}
 
 .welcome-container {
-    padding: 80px 20px; 
+    padding: 10px 20px; 
     text-align: center;
     background-image:url(images/clean.jpg); 
-    margin: 40px auto;
+    margin: 20px auto;
     max-width: 900px;
     border-radius: 20px; 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.678); 
 }
 
 
