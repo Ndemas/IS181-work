@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student portifolio website</title>
+    <link rel="stylesheet" href="emma.css">
+</head>
+<body>
+    
+
+<button id="themeToggleBtn">Giza</button>
+    
+<nav>
+    <a href="../index.html">Home</a>
+<a href="../stott/stott.html">Stott</a>
+ <a href="../reuben/Reuben.html">Reuben</a>
+        <a href="../chris/Chris.html">Chris</a>
+  <a href="../charles/Charles.html">Charles</a>
+<a href="../tarimo/tarimo.html">Tarimo</a>
+  <a href="../michael/Michael.html">Michael</a>
+  <a href="../godfrey/Godfrey.html">Godfrey</a>
+<a href="emmanuel/Emmanuel.html">Emmanuel</a>
+    <a href="Contact.html">Contact</a>
+</nav>
+<br><br>
+
+<div class="hero">
+    <div class="content">
+        <h1>Personal information</h1>
+        <h2>Emmanuel joseph masalu</h2>
+        <h2>biography</h2>
+        <p>I was born on 25,december 2005 in Geita region</p>
+        <p>i started my education journely at bugalama primary school on 2012 up to 2018</p>
+        <p>then 2019 was selected to join Bugalama sec school up to 2022</p>
+        <p>also 2023 was selected to join sengerema sec school and finish my high education level on 2025</p> 
+        <p>finally 2025 also was joined to univervesty of dar es salam for my first degree of business information technology </p>
+
+        <div class="skills-container">
+            <div class="skill-item">
+                <label class="section-label">SKILLS:</label>
+                <h2>Programming (Click to view)</h2>
+                <ul class="skills-list hidden">
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>C Language</li>
+                </ul>
+            </div>
+            <br>
+            <div class="skill-item">
+                <label class="section-label">SPORT:</label>
+                <h2>Interested Sport (Click to view)</h2>
+                <ul class="skills-list hidden">
+                    <li>Playing Basketball</li>
+                    <li>Handball</li>
+                </ul>
+            </div>
+        </div>
+
+        <button id="theme-toggle">Toggle Theme</button>
+
+        <h2>Education</h2>
+        <button id="sort-btn">Sort Year</button>
+        <table border="1" id="edu-table">
+            <tbody>
+                <tr><th>Level</th><th>School</th><th>Year</th></tr>
+                <tr><td>Primary</td><td>Bugalama Primary School</td><td>2018</td></tr>
+                <tr><td>Secondary</td><td>Bugalama Sec School</td><td>2022</td></tr>
+                <tr><td>A-level</td><td>Sengerema High School</td><td>2025</td></tr>
+                <tr><td>University Level</td><td>University of Dar es Salaam</td><td>2025</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Skills</h2>
+        <div class="skill-item">
+            <strong>Web Development</strong>
+            <p class="skill-details hidden">HTML5, CSS3, and Vanilla JavaScript.</p>
+        </div>
+
+        <h2>Hobbies/interests</h2>
+        <ul>
+            <li>
+                <strong>1. Playing football:</strong>
+                <span class="hobby-details hidden">playing football is one of my favourite hobbies. it helps me stay fit , improves teamwork and have fun with my friend</span>
+                <button class="btn">Read More</button>
+            </li>
+            <li>
+                <strong>2. Praying:</strong>
+                <span class="hobby-details hidden">I pray every day to thanks GOD for the blessings.prayer gives me streght,peace,and guidance in my daily life</span>
+                <button class="btn">Read More</button>
+            </li>
+            <li>
+                <strong>3. Gaming:</strong>
+                <span class="hobby-details hidden">i always playing game once per week. playing games helps me to relax and enjoy my free time after work or school</span>
+                <button class="btn">Read More</button>
+            </li>
+        </ul>
+
+        <h2>Image Section</h2>
+        <div class="image-gallery">
+            <img src="maguta.jpg" alt="Profile" class="lightbox-trigger" width="40%">
+            <img src="friends.jpg" alt="Friends" class="lightbox-trigger" width="40%">
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span id="closeBtn">&times;</span>
+            <img id="lightboxImg" src="" alt="Enlarged Image">
+        </div>
+
+        <h2><b>favorite link</b></h2>
+        <p><a href="facebook.com"><img src="fb.jpg" width="20%" alt="Facebook"></a></p>
+        <p><a href="youtube.com"><img src="youtube.jpg" alt="YouTube"></a></p>
+    </div>
+</div>
+
+<button id="scroll-top-btn" class="hidden-btn">↑ Top</button>
+
+<script src="script.js" defer></script>
+</body>
+</html>
