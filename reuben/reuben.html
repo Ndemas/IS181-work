@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Reuben Portfolio</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+ <header><h1 style="color: #e6edf7;"><Span style="color: #2563EB;">G.</Span>W</h1>
+    <button onclick="toggleMode()">
+🌙 Mode
+</button>
+        <nav><ul>
+    <li><a href="../index.html">Home</a></li>
+<li><a href="../stott/stott.html">Stott</a></li>
+ <li><a href="../reuben/Reuben.html">Reuben</a></li>
+        <li><a href="../chris/Chris.html">Chris</a></li>
+  <li><a href="../charles/Charles.html">Charles</a></li>
+<li><a href="../tarimo/tarimo.html">Tarimo</a></li>
+  <li><a href="../michael/Michael.html">Michael</a></li>
+  <li><a href="../godfrey/Godfrey.html">Godfrey</a></li>
+    <li><a href="../emmanuel/Emmanuel.html">Emmanuel</a></li>
+    <li><a href="../Contact.html">Contact</a></li></ul></nav></header>
+
+<!-- HERO -->
+<div class="hero">
+    <img src="images/anes.JPG" alt="My Photo">
+    <h1>Anesius Reuben Tinchwa</h1>
+  <!--<p>BSc BIT Student | Innovator | Future Entrepreneur</p>--> 
+    <p id="typing"></p>
+   <h3 id="clock"></h3> 
+</div>
+
+
+
+<div class="container">
+
+<!-- ABOUT -->
+<div class="card">
+    <h2>About Me</h2>
+    <p>
+        <p>My name is Anesius Reuben Tinchwa, and I am a Bachelor of Science in Business Information Technology (BSc BIT) student at the University of Dar es Salaam. I am passionate about technology, innovation, and entrepreneurship, and I enjoy exploring how digital solutions can solve real-world problems.</p>
+
+<p>I have a strong interest in web development, programming, and business technology. Through my studies and personal projects, I continue to develop my technical, analytical, and leadership skills. I am committed to continuous learning, professional growth, and creating innovative solutions that make a positive impact on society.</p>
+
+<p>My long-term goal is to become a successful technology entrepreneur who uses knowledge and creativity to contribute to the development of businesses and communities.</p>
+.
+    </p>
+</div>
+
+<!-- SKILLS -->
+<div class="card">
+<h2>Skills</h2>
+
+<div class="skill" onclick="toggleSkill('html')">
+WEB DEVELOPMENT ▼
+</div>
+
+<p id="html" class="hidden skill-details">
+I have skills in web development using HTML, CSS, and JavaScript. I can create responsive, user-friendly, and visually appealing websites that work across different devices. I enjoy designing interfaces and improving user experience through modern web technologies.
+</p>
+
+<div class="skill" onclick="toggleSkill('cprog')">
+PROGRAMMING & PROBLEM SOLVING ▼
+</div>
+
+<p id="cprog" class="hidden skill-details">
+I possess foundational programming skills in C and other computing concepts gained through my Bachelor of Science in Business Information Technology studies. I can analyze problems, develop logical solutions, and create programs that meet specific requirements efficiently.
+</p>
+
+</div>
+<!-- EDUCATION -->
+<div class="card">
+    <h2>Education</h2>
+    <button onclick="sortTable()">Sort by Year</button>
+    <table id="eduTable">
+        <tr>
+            <th>Level</th>
+            <th>School</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>Primary education</td>
+            <td>St. Peter Primary School</td>
+            <td>2016</td>
+        </tr>
+        <tr>
+            <td>Secondary education</td>
+            <td>Karagwe Secondary School</td>
+            <td>2020</td>
+        </tr>
+        <tr>
+            <td>Ordinary diploma (NTA LEVEL 6)</td>
+            <td>Arusha technical college</td>
+            <td>2024</td>
+        </tr>
+        |<tr>
+            <td>Bachelor degree</td>
+            <td>University od Dar es salaam</td>
+            <td>2025..</td>
+        </tr>
+    </table>
+</div>
+
+<!-- HOBBIES -->
+<div class="card">
+<h2>Hobbies</h2>
+
+<p id="hobbyText" class="hobby-text collapsed">
+
+I enjoy reading entrepreneurship books, leadership materials, technology blogs and historical events. Reading helps me gain knowledge, improve critical thinking, and understand how successful people solve problems.
+
+I also enjoy football and teamwork activities because they build discipline, collaboration, and leadership skills. Additionally, I spend time learning new technologies and participating in business and innovation discussions that help me develop entrepreneurial ideas and stay updated with emerging trends.
+</p>
+
+<button onclick="toggleHobby()" id="hobbyBtn">
+Read More
+</button>
+
+</div>
+
+<!-- IMAGE -->
+<div class="card image-section">
+    <h2>Gallery</h2>
+
+    <img src="images/anes.JPG" class="gallery-img">
+
+    <div id="lightbox" class="lightbox">
+        <span id="closeBtn">&times;</span>
+        <img id="lightboxImg">
+    </div>
+</div>
+
+<!-- LINKS -->
+<div class="socials">
+<a href="#">FACEBOOK<i class="fab fa-facebook"></i></a>
+<a href="#">INSTAGRAM<i class="fab fa-instagram"></i></a>
+<a href="#">LINKEDIN<i class="fab fa-linkedin"></i></a>
+<a href="#">GITHUB<i class="fab fa-github"></i></a>
+<a href="#">WHATSAPP<i class="fab fa-whatsapp"></i></a>
+</div>
+
+</div>
+
+<button id="topBtn" onclick="topFunction()">
+↑ Top
+</button>
+
+<footer>
+    <p>&copy; 2026 Anesius Reuben Tinchwa | BSc BIT Student</p>
+</footer>
+
+<script src="script.js"></script
+</body>
+</html>

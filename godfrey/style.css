@@ -1,0 +1,296 @@
+
+body{
+                background-color: aquamarine;
+                font-size:medium ;
+                corner-shape: var(aquamarine);
+               }
+               h1{
+                color:blue;
+                text-align: center;
+                font-weight: 500;
+               }
+               /*navigation link*/
+               nav a:hover{
+                text-decoration: none;
+                color: #2563EB;
+                transition:2s;
+        
+               }
+               nav{
+        
+                text-decoration:underline;
+                text-align: cenetr;
+               }
+               h2{
+                color:blueviolet;
+               }
+            ol{
+                font-size: 12px;
+                font-family: arial;
+                font-weight: bold;
+                border-style: dotted;
+                border-color: blue;
+                text-decoration: underline;
+                text-decoration-style:dotted;
+                text-decoration-color:blue;
+                text-orientation: upright;
+            
+            }
+            table{
+                width: 700px;
+                height:200px;
+                border-collapse:inherit;
+                padding:0;
+                color:darkmagenta;
+                text-align:unset
+            }
+            ul{
+        
+                text-transform: capitalize;
+                text-decoration: dotted;
+            }
+            image {
+                width: 250px; 
+                height:250;
+                border-radius: 50%;
+                border:5px solid rgb(230, 222, 222);
+                padding:12px;
+                background-color: rgb(134, 62, 202);
+            }
+            th{
+                background-color: black;
+            }
+
+
+            .hidden{
+    display:none;
+}
+
+.skill{
+    cursor:pointer;
+    margin-bottom:10px;
+}
+            
+         </style>
+    <body>
+
+
+/*table part*/
+.hidden {
+    display: none !important;
+}
+
+
+/* apperance skills here*/
+.skill {
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding: 6px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* automation effect*/
+.skill:hover, .skill.active {
+    color: #2563EB;
+    background-color: rgba(37, 99, 235, 0.1);
+    padding-left: 12px;
+}
+
+
+/*structure show how text typed themself*/
+.details {
+    margin-top: 5px;
+    color: #475569;
+    font-style: italic;
+    border-left: 2px solid #2563EB;
+    padding-left: 10px;
+}
+
+
+table {
+    width: 700px;
+    height: 200px;
+    border-collapse: collapse;
+    color: darkmagenta;
+    transition: all 0.4s ease;
+}
+
+th {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+
+/*when click sortbtn change color automatically and year */
+#sortBtn {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#sortBtn:hover {
+    background-color: #1d4ed8;
+}
+
+.row-flash {
+    background-color: rgba(37, 99, 235, 0.2);
+}
+
+
+/*hidde first desription*/
+.hidden {
+    display: none !important;
+}
+
+
+/*structure of hobby*/
+.hobby-desc {
+    margin: 8px 0;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 3px solid #10b981; /* Rangi ya kijani kibichi */
+    font-weight: 500;
+}
+
+/*button to read more*/
+.toggle-btn {
+    background-color: #10b981;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #059669;
+}
+
+/*image section sow how to scroll centered when clicked*/
+img:not(#fb-icon) {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*image spread when click it*/
+img:not(#fb-icon):hover {
+    transform: scale(1.03);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/*lightbox overlay*/
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* black image behind */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/*button of closing the picture (x)*/
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 60px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* structure of scroll-to-top*/
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; /* Kinaanza kikiwa kimefichwa */
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #2563EB; /* Rangi ya bluu ya kisasa */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Kitufe cha duara cha kuvutia */
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+#scrollTopBtn:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+
+/* changes after 0.5 second for images*/
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+
+
+/* Mabadiliko ya sekunde 0.5 ili rangi zisibadilike ghafla bali ziteleze kwa ulaini */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Kitufe cha kisasa cha kubadilisha muonekano */
+#themeModeToggle {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 2px solid #2563EB;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+#themeModeToggle:hover {
+    transform: scale(1.05);
+}
+
+/* AUTOMATION CLASSES: Hizi ndizo rangi zitakazowaka kiotomatiki muonekano wa giza ukija */
+.dark-theme {
+    background-color: #0f172a !important; /* Rangi ya usiku mweusi */
+    color: #f8fafc !important; /* Maandishi yanakuwa meupe safi */
+}
+
+/* Jedwali na vichwa vya habari vinabadilika kuwa bluu ya anga wakati wa giza */
+.dark-theme h1, .dark-theme h2, .dark-theme h3, .dark-theme label {
+    color: #38bdf8 !important;
+}
+
+.dark-theme table {
+    color: #38bdf8 !important;
+    border-color: #38bdf8 !important;
+}
