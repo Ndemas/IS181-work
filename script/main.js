@@ -1,11 +1,11 @@
 
-function main(){
+document.addEventListener("DOMContentLoaded",function(){
     setTime();
     setInterval(setTime,1000);/*updates the time each second*/
     let message=document.getElementById("welcome-txt").textContent;
     document.getElementById("welcome-txt").textContent=" ";
     typeWriter(message,0);
-}
+
 /*the function main is used to start the script. we used this 
  because of the eventlistner "DomContent loaded" so that script it only
  the page is fully loaded*/
@@ -56,7 +56,7 @@ function typeWriter(strArr,i){
 and displays the text one character at a time inside the
  "welcome-txt" element. It uses setTimeout to create a delay
  between each character making it look like the text is being
-typed in real time by making recursive call.
+typed in real time by making recursive call.*/
 
 
 
@@ -64,6 +64,10 @@ typed in real time by making recursive call.
 
 
 
+})
 
-document.addEventListener("DOMContentLoaded",main);
-/*calls the main function only when the full pag has loaded*/
+
+
+
+
+
