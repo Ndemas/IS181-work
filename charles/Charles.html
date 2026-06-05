@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+
+<!--This is the html learninng website that will be used for our project for more knowledge -->
+<!--for our learning purpose this is the big tool so we can learn a lot to increase our skills -->
+
+
+        <title>student portifolio website</title>
+        <link rel="stylesheet" href="style.css">
+         
+<button id="themeToggleBtn" onclick="toggleTheme()">Giza </button>
+<a href="../index.html">Home</a>
+<a href="../stott/stott.html">Stott</a>
+ <a href="../reuben/Reuben.html">Reuben</a>
+        <a href="../chris/Chris.html">Chris</a>
+  <a href="Charles.html">Charles</a>
+<a href="../tarimo/tarimo.html">Tarimo</a>
+  <a href="..michael/Michael.html">Michael</a>
+  <a href="..godfrey/Godfrey.html">Godfrey</a>
+<a href="..emmanuel/Emmanuel.html">Emmanuel</a>
+    <a href="Contact.html">Contact</a>
+    <br><br>
+<div class="hero">
+    <div class="content"><h1>Personal information</h1>
+    <h2>Charles Fikiri Masaga</h2>
+    <h2>Biography</h2>
+    <p>I was born in 4,August,2003 in Geita Region</p>
+    <p>Then after in 2012 i started my primary education at Uhuru primary school</p>
+    <p>In 2018 i successeded to finish up my primary education</p>
+    <p>Then in 2019 i joined the secondary education at Katoro sec school and finish up in 2022</p>
+    <p>In 2023 i join my A-Level education at sengerema high school and finish up in 2025</p>
+    <p>Finally July 2025 i joined my university level at the University of Dar es Salaam</p>
+     </div>       <img src="Charles profile.jpg" alt="Charles profile" class="top-profile-pic" width="500px" length="50px">
+</div>
+    <h2>Skills</h2>
+    <div class="skills">
+            <h2 onclick="toggleSkills(this)">Computer programming</h2>
+            <ul>
+                <li>C language</li>
+                <li>HTML</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+            <p class="hidden">I'm alwals use these programming languagees to develop different software and websites.</p>
+            </div>
+            <div class ="skills">
+                <h2 onclick="toggleSkills(this)">Sports</h2>
+                <ul>
+                    <li>Football</li>
+                    <li>Basketball</li>
+                    <li>Handball</li>
+                </ul>
+                <p class="hidden">I enjoy playing various sports, especially football and basketball.</p>
+            </div>
+            <div class="skills">
+                <h2 onclick="toggleSkills(this)">Gaming</h2>
+                <ul>
+                    <li>Efootball</li>
+                    <li>Dream league</li>
+                </ul>
+                <p class="hidden">I enjoy playing various games, especially football and basketball.</p>
+            </div>
+
+    
+       <div class="education-section" >
+    <h2>Education</h2>
+    <button id="sort-btn"onclick="sortTable()">Sort by Year (Ascending)</button>
+    <table id="education-table">
+        <thead>
+            <tr>
+        <th>Level</th>
+        <th>School</th>
+        <th>Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Primary</td>
+            <td>Uhuru primary school</td>
+            <td>2018</td>
+        </tr>
+
+        <tr>
+            <td>Secondary</td>
+            <td>Katoro sec school</td>
+            <td>2022</td>
+        </tr>
+
+        <tr>
+            <td>A- Level</td>
+            <td>Sengerema High School</td>
+            <td>2025</td>
+        </tr>
+
+        <tr>
+            <td>University Level</td>
+            <td>University of Dar es Salaam</td>
+            <td>2025</td>
+
+        </tr>
+        </tbody>
+        </table>
+       </div>
+
+       <div class="hobbies-section">
+        <h2>Hobbies/interests</h2>
+        <div class="hobby-card">
+        <h3>playing football</h3>
+        <p class="hobby-text collapsed">
+            I enjoy playing football with my friends every weekend days especially saturday,its a great way to stay active and have fun with friends.
+        </p>
+        <button class ="toggle-btn" onclick="toggleHobby(this)">Read more</button>
+        </div>
+        <div class="hobby-card">
+        <h3>Gaming</h3> 
+        <p class="hobby-text collapsed">
+            I enjoy playing various games, especially football and basketball.
+        </p>
+        <button class ="toggle-btn" onclick="toggleHobby(this)">Read more</button>
+        </div>
+        <div class="hobby-card">
+        <h3>Listening to Music</h3>
+        <p class="hobby-text collapsed">
+            I like listening to music whenever I have free time.
+        </p>
+        <button class ="toggle-btn" onclick="toggleHobby(this)">Read more</button>
+        </div>
+
+
+
+        <div class="image-section">
+            <h2>My Gallery</h2>
+            
+            <div class="gallery-grid">
+                <img src="profile.jpg" alt="My profile picture" class="lightbox-trigger" onclick="openLightbox(this)">
+                <img src="Charity Donation.jpg" alt="Charity donation event" class="lightbox-trigger" onclick="openLightbox(this)">
+            </div>
+
+                <div id="lightbox-overlay"class="lightbox-hidden" >
+                    <span id="lightbox-close" onclick="closeLightbox()">&times;</span>
+                    <img id="lightbox-modal-img" src="" alt="Enlarged image">
+                </div>
+            
+        
+            
+         
+    
+
+            <h2><b>Favorite Link</b></h2>
+        
+           <p><a href="Youtube.com"> <img src="youtube.jpg" alt="" srcset="">Youtube</a></p>
+           <p><a href="facebook.com">facebook</a>
+           <script src="Script.js"></script>
+           <button id="scrollToTopBtn" onclick="scrollToTop()">&#8593; juu</button>
+        </body>
+
+
