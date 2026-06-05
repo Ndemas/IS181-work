@@ -1,129 +1,173 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-document.addEventListener("DOMContentLoaded",function(){
+    // wait untill the page loads first before running any js
+
+    let skillItem = document.querySelectorAll(".skill");
+
+    // add click event to every skill item
+    skillItem.forEach(function (skill) {
+        skill.addEventListener("click", showDescription);
+    });
+
+    // shows or hides the skill description when clicked
+    function showDescription() {
+        this.querySelector(".description").classList.toggle("hidden");
+    }
 
 
-let skillItem=document.querySelectorAll(".skill");
-skillItem.forEach(function(skill){
-skill.addEventListener("click",showDescription)
+    // HOBBIES SECTION
 
-})
+    // get all read more buttons from hobbies section
+    const hobbyButtons = document.querySelectorAll(".read-more");
 
-function showDescription(){
-    this.querySelector(".description").classList.toggle("hidden")
-   
-}
+    hobbyButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            // find the text that belongs to this button only
+            const text =
+                this.parentElement.querySelector(".hobby-text");
+
+            // expand or collapse the text
+            text.classList.toggle("expanded");
+
+            // change button text depending on state
+            if (text.classList.contains("expanded")) {
+                this.textContent = "Read Less";
+            }
+            else {
+                this.textContent = "....Read More";
+            }
+
+        });
+
+    });
 
 
+    // DARK MODE 
 
+    // button for switching between light and dark themes
+    const themeBtn = document.getElementById("themeBtn");
 
-const hobbyButtons = document.querySelectorAll(".read-more");
+    themeBtn.addEventListener("click", function () {
 
-hobbyButtons.forEach(function(button){
+        document.body.classList.toggle("light-mode");
 
-    button.addEventListener("click", function(){
-
-        const text =
-            this.parentElement.querySelector(".hobby-text");
-
-        text.classList.toggle("expanded");
-
-        if(text.classList.contains("expanded")){
-            this.textContent = "Read Less";
+        // update the button text so user knows current mode
+        if (document.body.classList.contains("light-mode")) {
+            this.textContent = "🌙 Dark Mode";
         }
-        else{
-            this.textContent = "....Read More";
+        else {
+            this.textContent = "☀ Light Mode";
         }
 
     });
 
 
+    // EDUCATION TABLE SORTING 
 
+    // this variable keeps track of which order we are sorting
+    let ascending = true;
 
+    const sortBtn = document.getElementById("sortBtn");
 
+    sortBtn.addEventListener("click", function () {
 
-});
+        const table = document.querySelector(".education table");
 
-//this is for the dark mode
-const themeBtn = document.getElementById("themeBtn");
+        // skip the header row
+        const rows = Array.from(table.rows).slice(1);
 
-themeBtn.addEventListener("click", function(){
+        // sort by graduation year
+        rows.sort(function (a, b) {
 
-    document.body.classList.toggle("light-mode");
+            const yearA = Number(a.cells[2].textContent);
+            const yearB = Number(b.cells[2].textContent);
 
-    if(document.body.classList.contains("light-mode")){
-        this.textContent = "🌙 Dark Mode";
-    }
-    else{
-        this.textContent = "☀ Light Mode";
-    }
+            return ascending
+                ? yearB - yearA
+                : yearA - yearB;
 
-});
+        });
 
-/*This is for sorting*/
-let ascending = true;
-const sortBtn = document.getElementById("sortBtn");
-sortBtn.addEventListener("click", function(){
-    const table = document.querySelector(".education table");
-    const rows = Array.from(table.rows).slice(1);
-    rows.sort(function(a,b){
-        const yearA = Number(a.cells[2].textContent);
-        const yearB = Number(b.cells[2].textContent);
-        return ascending
-            ? yearB - yearA
-            : yearA - yearB;
-    });
-    rows.forEach(function(row){
-        table.appendChild(row);
-    });
-    ascending = !ascending;
-});
+        // put rows back into the table after sorting
+        rows.forEach(function (row) {
+            table.appendChild(row);
+        });
 
-/*scroll*/
-const toTop = document.getElementById("toTop");
+        // switch sorting direction for next click
+        ascending = !ascending;
 
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 200) {
-        toTop.style.display = "block";
-    } else {
-        toTop.style.display = "none";
-    }
-
-});
-
-toTop.addEventListener("click", () => {
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
     });
 
-});
-const gallery = document.getElementById("gallery");
-const xButton = document.getElementById("close");
 
-xButton.addEventListener("click", function () {
-    gallery.style.visibility = "hidden";
-    gallery.style.opacity = "0";
-});
+    //  SCROLL TO TOP BUTTON 
 
-const galleryImg = document.getElementById("gallery-img");
-const images = document.querySelectorAll(".image-item");
+    const toTop = document.getElementById("toTop");
 
-images.forEach(function (img) {
-    img.addEventListener("click", function () {
-        const imgPath = this.getAttribute("src"); // ✅ correct
-        setGalleryImage(imgPath);
+    // show button only after scrolling down a bit
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 200) {
+            toTop.style.display = "block";
+        } else {
+            toTop.style.display = "none";
+        }
+
     });
+
+    // smooth scroll back to top of page
+    toTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+
+    //  IMAGE GALLERY 
+
+    const gallery = document.getElementById("gallery");
+    const xButton = document.getElementById("close");
+
+    // closes the popup gallery when X is clicked
+    xButton.addEventListener("click", function () {
+
+        gallery.style.visibility = "hidden";
+        gallery.style.opacity = "0";
+
+    });
+
+    const galleryImg = document.getElementById("gallery-img");
+    const images = document.querySelectorAll(".image-item");
+
+    // add click event to all gallery images
+    images.forEach(function (img) {
+
+        img.addEventListener("click", function () {
+
+            // get image source path
+            const imgPath = this.getAttribute("src");
+
+            // send image to gallery viewer
+            setGalleryImage(imgPath);
+
+        });
+
+    });
+
+    // updates gallery image and opens popup
+    function setGalleryImage(imgPath) {
+
+        galleryImg.setAttribute("src", imgPath);
+
+        gallery.style.visibility = "visible";
+
+        // make it visible again after opening
+        gallery.style.opacity = "100%";
+
+    };
+
 });
-
-function setGalleryImage(imgPath) {
-    galleryImg.setAttribute("src", imgPath);
-    gallery.style.visibility = "visible";
-    gallery.style.opacity="100%"
-}
-
-
-
-
-})
