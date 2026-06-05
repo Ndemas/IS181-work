@@ -1,68 +1,208 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>profile</title>
-        <link rel="stylesheet" href="k.css">
-    </head>
-    <body>
-        <!--navigation-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gideone Jackson Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">G.W</div>
+    <nav>
         <a href="../index.html">Home</a>
-<a href="../stott/stott.html">Stott</a>
- <a href="../reuben/Reuben.html">Reuben</a>
-        <a href="../chris/Chris.html">Chris</a>
-  <a href="../charles/Charles.html">Charles</a>
-<a href="../tarimo/tarimo.html">Tarimo</a>
-  <a href="Michael.html">Michael</a>
-  <a href="../godfrey/Godfrey.html">Godfrey</a>
-<a href="../emmanuel/Emmanuel.html">Emmanuel</a>
-    <a href="Contact.html">Contact</a>
-    
-        <!--personal information-->
-        <h1>PERSONAL INFORMATION</h1><b>
-       <h1>Name:"Michael Baraak Gdion"</h1>
-       <p>programme: Business Information and Technology </p>
-      <p>collage:communition information and technology</p>
-      <p>department: Computer Science</p>
+        <a href="../stott/stott.html"> Stott </a>
+        <a href="../reuben/Reuben.html"> Reuben </a>
+        <a href="../chris/Chris.html"> Chris </a>
+        <a href="../charles/Charles.html"> Charles </a>
+        <a href="../tarimo/tarimo.html"> Tarimo </a>
+        <a href="Michael.html"> Michael </a>
+        <a href="../godfrey/Godfrey.html"> Godfrey </a>
+        <a href="../emmanuel/Emmanuel.html"> Emmanuel </a>
+        <a href="../Contact.html"> Contact </a>
+    </nav>
 
-       <!--skills-->
-       <label>SKILLS:</label><b>
-       <ul>
-        <li>programming</li> 
-        <li>HTML</li> 
-        <LI>PYTHON</LI> 
-    </ul>
-       
-      
-    <!--Education-->
-       <label>EDUCTION:</label>
-     <table border="1">
-       <tr>
-        l</td>
-        <th>school</th>
-        <th>yeaar</th>
-       <th>level</th>
-        
+    <button class="mode-btn" onclick="toggleMode()">
+        🌙 Theme
+    </button>
+
+</header>
+
+<section class="hero">
+    <img src="images/gideon.jpg" alt="Gideone Jackson">
+
+    <h1>Michael Baraka Gideone</h1>
+
+    <p>BIT student and innovator</p>
+</section>
+
+
+<div class="container">
+
+    <div class="card">
+        <h2>About Me</h2>
+
+        <p>
+            My name is Gideone Jackson and I am a Bachelor of Science in
+            Business Information Technology student. I am passionate about
+            technology, innovation, and digital transformation. I enjoy
+            creating websites, learning new technologies, and solving
+            real-world problems through information systems.
+        </p>
+    </div>
+
+    <div class="card">
+    <h2>Skills</h2>
+
+    <div class="skill" onclick="toggleSkill('web')">
+        Web Development
+    </div>
+
+    <p id="web" class="hidden">
+        I can build responsive and modern websites using HTML, CSS and JavaScript.
+    </p>
+
+    <div class="skill" onclick="toggleSkill('problem')">
+        Problem Solving
+    </div>
+
+    <p id="problem" class="hidden">
+        I enjoy analyzing challenges and creating practical solutions.
+    </p>
+
+    <div class="skill" onclick="toggleSkill('leadership')">
+        Leadership
+    </div>
+
+    <p id="leadership" class="hidden">
+        I can coordinate teams and guide projects toward success.
+    </p>
+</div>
+
+    <div class="card">
+
+    <h2>Education</h2>
+
+    <button class="sort-btn" onclick="sortTable()">
+        Sort by Year
+    </button>
+
+    <table id="eduTable">
+
         <tr>
-        <td>Tabora boys</td>
-        <td>level</td>
-        <td>2025</td>
-       </tr>
-    </table><br>
-    
-     <label>HOBBIES:</label>
-    <ul>
-        <li>football</li> 
-        <li>singing</li> 
-        <li>high jumping</li> 
+            <th>Level</th>
+            <th>Institution</th>
+            <th>Year</th>
+        </tr>
 
-    <label>IMAGE:</label>
-    <p>Welcome to my photopage</p>
-    <img src="mitch.jpg" width="200"><br>
-    <img src="mitch2.jpg" width="200"><br><br>
+        <tr>
+            <td>Primary</td>
+            <td>Bright Future Primary</td>
+            <td>2017</td>
+        </tr>
 
+        <tr>
+            <td>Secondary</td>
+            <td>Victory Secondary</td>
+            <td>2021</td>
+        </tr>
 
-    <label>LINKS:</label><br>
-    <p>my fovorite links</p>
-      <a href="https://Instagram.com"><img src="images/insta.jpg" width="200"></img></a>
-     </body>
+        <tr>
+            <td>University</td>
+            <td>University Student</td>
+            <td>2026</td>
+        </tr>
+
+    </table>
+
+</div>
+
+    <div class="card">
+
+    <h2>Hobbies</h2>
+
+    <p>
+
+        Reading technology articles, web development,
+        football and entrepreneurship discussions.
+
+        <span id="more" style="display:none">
+
+            I also enjoy innovation research,
+            teamwork activities and exploring
+            emerging digital technologies.
+
+        </span>
+
+    </p>
+
+    <button onclick="readMore()">
+        Read More
+    </button>
+
+</div>
+    <div class="card">
+
+        <h2>My Motto</h2>
+
+        <blockquote>
+            "Success comes to those who continuously learn, adapt and innovate."
+        </blockquote>
+
+    </div>
+
+    <div class="card">
+
+    <h2>Gallery</h2>
+
+    <img src="images/gideon.jpg"
+         class="profile-image"
+         onclick="openImage(this.src)">
+
+</div>
+
+<div id="lightbox" class="lightbox">
+
+    <span onclick="closeImage()">&times;</span>
+
+    <img id="lightboxImg">
+
+</div>
+    <div class="card">
+
+        <h2>Connect With Me</h2>
+
+        <div class="socials">
+
+            <a href="#"><i class="fab fa-facebook"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+
+            <a href="#"><i class="fab fa-github"></i></a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button id="topBtn" onclick="topFunction()">
+    ↑
+</button>
+
+<footer>
+    <p>
+        © 2026 Gideone Jackson Portfolio
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
 </html>
